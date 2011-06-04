@@ -1,0 +1,60 @@
+h1. Inspira Blog Engine
+
+Welcome!
+
+This is the Inspira Blog engine - Web.Generics sample application.
+
+We wanted to create a sample Application to Web.Generics in order to show how 
+to use it in a real-word project. We think that this is the best way to learn 
+quickly about Web.Generics
+
+We had the idea to create a series of blog posts describing the whole development
+process to make it easier to understand the motivations around the project and
+how the code is being evoluted.
+
+Then we had an insane idea: why not publish the blog posts about the blog engine 
+in the engine itself? I mean... something like a meta-blog. I know, this is kinda
+weird... why reinvent the wheel and not use (the excellent) WordPress or something 
+similar?
+
+The answer is simple: use the blog engine to publish posts about the development 
+of the blog engine itself will force us to develop it in an iterative way, and 
+really prioritize! We need to start small and aggregate the most important features 
+steadily. Something like this:
+
+# Only show this blog post, in a static HTML file
+# User stories, release planning and BDD/TDD
+# Read the post from a database, without management, and the user who created it
+# Allow the visitor to write and read comments
+# Categories and tags
+# Print version, RSS and share in social networks
+# Tag cloud
+# Blogger dashboard
+# Allow the visitors to register, logon and other identity tasks
+# Allow the users to create blogs for them
+# Allow users to invite others to write posts in their blogs
+# Administrative area
+
+We plan to use Kanban-like continuous flow, reduce the work in progress to a 
+minimum and inspect the bottlenecks to improve the process.
+
+h2. Project goals
+
+* To show you how we develop software and promote the exchange of ideas (we would love to receive feedback from you)
+* To gain experience in some of the best practices in the software industry, like BDD, wireframes, User Stories, Scrum, SOLID and so on
+* The blog will use [Web.Generics] as a framework, so we want to promote Web.Generics and use the blog as a sample application
+* We will use it as the official blog engine for Web.Generics
+  
+Project constraints and assumptions:
+ 
+* 100% written in English (blog + documentation)
+* Requirements will be written as User Stories 
+* Use Behavior-Driven Development and Domain Driven Design
+* Be agile, deploy continuously and get feedback quickly
+* Use ASP.NET MVC 3 and Microsoft.NET Framework 4
+
+We hope you will enjoy the ride!
+
+The Web.Generics team
+
+-------------s
