@@ -10,6 +10,7 @@ namespace WebGen.ApplicationServices.InversionOfControl
         void RegisterInstance<T>(T obj);
         void RegisterTypeHttpContextManaged<TFrom, TTo>() where TTo : TFrom;
         void RegisterTypeHttpContextManaged<T>();
+        void RegisterTypeHttpContextManaged<T>(Func<T> func);
 
         /// <summary>
         /// Passes a parameter to the constructor in the moment the class is instantiated

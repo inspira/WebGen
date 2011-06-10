@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{581105BD-13EF-4B7A-B4E6-56B64E7FC6A8}</ProjectGuid>
+    <ProjectGuid>{39B24AB1-E8D6-4C8B-B21E-769747093139}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WebGen.ConceptApp.Infrastructure</RootNamespace>
-    <AssemblyName>WebGen.ConceptApp.Infrastructure</AssemblyName>
+    <RootNamespace>WebGen.ConceptApp.Infrastructure.DataAccess.EntityFramework</RootNamespace>
+    <AssemblyName>WebGen.ConceptApp.Infrastructure.DataAccess.EntityFramework</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -31,10 +31,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.4.1.10311.0\lib\EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppContext.cs" />
+    <Compile Include="ClienteDao.cs" />
+    <Compile Include="InversionOfControl\InversionOfControlMapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -69,5 +69,14 @@ namespace WebGen.Infrastructure.InversionOfControl
         {
             return container.TryGetInstance(t);
         }
+
+
+        public void RegisterTypeHttpContextManaged<T>(Func<T> func)
+        {
+            container.Configure(x =>
+            {
+                x.For<T>().HybridHttpOrThreadLocalScoped().Use(func);
+            });
+        }
     }
 }

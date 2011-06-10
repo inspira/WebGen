@@ -37,7 +37,16 @@
     <Reference Include="EntityFramework">
       <HintPath>..\packages\EntityFramework.4.1.10311.0\lib\EntityFramework.dll</HintPath>
     </Reference>
+    <Reference Include="NHibernate, Version=3.1.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\NHibernate.3.1.0.4000\lib\Net35\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate.ByteCode.LinFu, Version=3.1.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\NHibernate.LinFu.3.1.0.4000\lib\Net35\NHibernate.ByteCode.LinFu.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Data" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
   </ItemGroup>
@@ -51,6 +60,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="hibernate.cfg.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -72,9 +84,9 @@
       <Project>{5B59794D-BD21-471A-ACBD-C834C58378C2}</Project>
       <Name>WebGen.ConceptApp.Domain</Name>
     </ProjectReference>
-    <ProjectReference Include="..\WebGen.ConceptApp.Infrastructure\WebGen.ConceptApp.Infrastructure.csproj">
-      <Project>{581105BD-13EF-4B7A-B4E6-56B64E7FC6A8}</Project>
-      <Name>WebGen.ConceptApp.Infrastructure</Name>
+    <ProjectReference Include="..\WebGen.ConceptApp.Infrastructure.DataAccess.NHibernate\WebGen.ConceptApp.Infrastructure.DataAccess.NHibernate.csproj">
+      <Project>{1ED20D9F-6FCF-414B-9966-1D90DA3D9720}</Project>
+      <Name>WebGen.ConceptApp.Infrastructure.DataAccess.NHibernate</Name>
     </ProjectReference>
     <ProjectReference Include="..\WebGen.Core\WebGen.Core.csproj">
       <Project>{72C09915-2A7E-412B-B5E1-B44FDCFBD55F}</Project>
