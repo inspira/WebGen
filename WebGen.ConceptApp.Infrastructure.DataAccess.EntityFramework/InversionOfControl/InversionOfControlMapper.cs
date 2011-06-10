@@ -2,7 +2,7 @@ using WebGen.ConceptApp.Domain.Repositories;
 using WebGen.ConceptApp.Infrastructure.DataAccess.EntityFramework;
 using WebGen.ApplicationServices.InversionOfControl;
 
-namespace WebGen.ConceptApp.UI.Mvc.InversionOfControl
+namespace WebGen.ConceptApp.Infrastructure.InversionOfControl
 {
     public class InversionOfControlMapper : IInversionOfControlMapper
     {
