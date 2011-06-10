@@ -9,7 +9,9 @@ namespace WebGen
         public static IDependencyResolver GetResolver(IInversionOfControlMapper mapper)
         {
             var abstractContainer = new StructureMapContainer();
-            mapper.DefineMappings(abstractContainer);
+			if (mapper != null) {
+            	mapper.DefineMappings(abstractContainer);
+			}
             return new SmDependencyResolver(abstractContainer);
         }
     }

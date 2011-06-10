@@ -10,7 +10,7 @@ using System.Web;
 using NHibernate.ByteCode.LinFu;
 using FluentNHibernate.Cfg.Db;
 
-namespace WebGen.ConceptApp.UI.Mvc.InversionOfControl
+namespace WebGen.ConceptApp.Infrastructure.InversionOfControl
 {
     public class InversionOfControlMapper : IInversionOfControlMapper
     {
@@ -29,15 +29,25 @@ namespace WebGen.ConceptApp.UI.Mvc.InversionOfControl
 
         private static ISessionFactory CreateSessionFactory()
         {
-            var cfg = new Configuration();
-            cfg.Configure();
+			 return Fluently.Configure()
+    .Database(
+      SQLiteConfiguration.Standard
+        .UsingFile("firstProject.db")
+    )
+	//.ProxyFactoryFactory(typeof(ProxyFactoryFactory))            
+	.Mappings(m => m.AutoMappings.Add(AutoMap.AssemblyOf<Cliente>()))
+    .BuildSessionFactory();
+			//			var cfg = new global::NHibernate.Cfg.Configuration();
+            //cfg.Configure();
+			/*
             return Fluently.Configure(cfg)
                 .Mappings(m => m.AutoMappings.Add(AutoMap.AssemblyOf<Cliente>())
 
-                ).ProxyFactoryFactory(typeof(ProxyFactoryFactory).AssemblyQualifiedName)
+                )
+                .ProxyFactoryFactory(typeof(ProxyFactoryFactory).AssemblyQualifiedName)
                 .BuildSessionFactory();
-            //            .ExposeConfiguration(Cfg => _cfg = Cfg)            .BuildSessionFactory();
-
+            */
+            //return cfg.BuildSessionFactory();
         }
 
         private static ISessionFactory _sessionFactory;
