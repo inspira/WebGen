@@ -4,3 +4,4 @@
 *.user
 */TestResults/*
 */App_Data/*
+*.pidb
