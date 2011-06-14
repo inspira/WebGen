@@ -34,11 +34,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+    <Reference Include="Iesi.Collections">
+      <HintPath>..\packages\Iesi.Collections.3.1.0.4000\lib\Net35\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate, Version=3.1.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\EntityFramework.4.1.10311.0\lib\EntityFramework.dll</HintPath>
+      <HintPath>..\packages\NHibernate.3.1.0.4000\lib\Net35\NHibernate.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SQLite">
+      <HintPath>..\packages\System.Data.SQLite\System.Data.SQLite.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
       <SpecificVersion>False</SpecificVersion>
@@ -59,11 +66,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Web.config" />
     <None Include="hibernate.cfg.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <Content Include="Web.config" />
-    <None Include="hibernate2.cfg.xml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
@@ -84,9 +90,9 @@
       <Project>{5B59794D-BD21-471A-ACBD-C834C58378C2}</Project>
       <Name>WebGen.ConceptApp.Domain</Name>
     </ProjectReference>
-    <ProjectReference Include="..\WebGen.ConceptApp.Infrastructure.DataAccess.EntityFramework\WebGen.ConceptApp.Infrastructure.DataAccess.EntityFramework.csproj">
-      <Project>{39B24AB1-E8D6-4C8B-B21E-769747093139}</Project>
-      <Name>WebGen.ConceptApp.Infrastructure.DataAccess.EntityFramework</Name>
+    <ProjectReference Include="..\WebGen.ConceptApp.Infrastructure.DataAccess.NHibernate\WebGen.ConceptApp.Infrastructure.DataAccess.NHibernate.csproj">
+      <Project>{1ED20D9F-6FCF-414B-9966-1D90DA3D9720}</Project>
+      <Name>WebGen.ConceptApp.Infrastructure.DataAccess.NHibernate</Name>
     </ProjectReference>
     <ProjectReference Include="..\WebGen.Core\WebGen.Core.csproj">
       <Project>{72C09915-2A7E-412B-B5E1-B44FDCFBD55F}</Project>
@@ -99,7 +105,6 @@
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
-  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

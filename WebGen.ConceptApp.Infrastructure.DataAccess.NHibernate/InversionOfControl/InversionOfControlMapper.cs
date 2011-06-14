@@ -28,7 +28,7 @@ namespace WebGen.ConceptApp.Infrastructure.InversionOfControl
         }
 
         private static ISessionFactory CreateSessionFactory()
-        {
+        {/*
             Configuration _cfg  = null;
 
 			 var factory = Fluently.Configure()
@@ -39,21 +39,19 @@ namespace WebGen.ConceptApp.Infrastructure.InversionOfControl
                 .ProxyFactoryFactory(typeof(ProxyFactoryFactory))            
                 .Mappings(m => m.AutoMappings.Add(AutoMap.AssemblyOf<Cliente>()))
                 .ExposeConfiguration(Cfg => _cfg = Cfg)
-                .BuildSessionFactory();
-			//			var cfg = new global::NHibernate.Cfg.Configuration();
-            //cfg.Configure();
-			/*
+                .BuildSessionFactory();*/
+            			var cfg = new global::NHibernate.Cfg.Configuration();
+            cfg.Configure();
+		
             return Fluently.Configure(cfg)
                 .Mappings(m => m.AutoMappings.Add(AutoMap.AssemblyOf<Cliente>())
 
                 )
                 .ProxyFactoryFactory(typeof(ProxyFactoryFactory).AssemblyQualifiedName)
                 .BuildSessionFactory();
-            */
+            
             //return cfg.BuildSessionFactory();
 
-var export = new SchemaExport(_cfg);        export.Execute(true, true, false);  
-             return factory;
         }
 
         private static ISessionFactory _sessionFactory;
