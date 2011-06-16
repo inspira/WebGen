@@ -22,5 +22,6 @@ namespace WebGen.ApplicationServices.InversionOfControl
         Object Resolve(Type t);
         IEnumerable<object> ResolveAll(Type serviceType);
         Object TryResolve(Type serviceType);
+        T TryResolve<T>();
     }
 }

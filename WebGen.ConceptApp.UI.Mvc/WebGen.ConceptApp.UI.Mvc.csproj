@@ -34,18 +34,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Iesi.Collections">
-      <HintPath>..\packages\Iesi.Collections.3.1.0.4000\lib\Net35\Iesi.Collections.dll</HintPath>
-    </Reference>
-    <Reference Include="NHibernate, Version=3.1.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\NHibernate.3.1.0.4000\lib\Net35\NHibernate.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Data.SQLite">
-      <HintPath>..\packages\System.Data.SQLite\System.Data.SQLite.dll</HintPath>
-    </Reference>
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
       <SpecificVersion>False</SpecificVersion>
@@ -90,13 +79,17 @@
       <Project>{5B59794D-BD21-471A-ACBD-C834C58378C2}</Project>
       <Name>WebGen.ConceptApp.Domain</Name>
     </ProjectReference>
-    <ProjectReference Include="..\WebGen.ConceptApp.Infrastructure.DataAccess.NHibernate\WebGen.ConceptApp.Infrastructure.DataAccess.NHibernate.csproj">
-      <Project>{1ED20D9F-6FCF-414B-9966-1D90DA3D9720}</Project>
-      <Name>WebGen.ConceptApp.Infrastructure.DataAccess.NHibernate</Name>
+    <ProjectReference Include="..\WebGen.ConceptApp.Infrastructure.DataAccess.EntityFramework\WebGen.ConceptApp.Infrastructure.DataAccess.EntityFramework.csproj">
+      <Project>{39B24AB1-E8D6-4C8B-B21E-769747093139}</Project>
+      <Name>WebGen.ConceptApp.Infrastructure.DataAccess.EntityFramework</Name>
     </ProjectReference>
     <ProjectReference Include="..\WebGen.Core\WebGen.Core.csproj">
       <Project>{72C09915-2A7E-412B-B5E1-B44FDCFBD55F}</Project>
       <Name>WebGen.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebGen.Infrastructure.EntityFramework\WebGen.Infrastructure.EntityFramework.csproj">
+      <Project>{F732BB8C-A160-449F-9E65-BAB799DD4518}</Project>
+      <Name>WebGen.Infrastructure.EntityFramework</Name>
     </ProjectReference>
     <ProjectReference Include="..\WebGen.UI.Mvc\WebGen.UI.Mvc.csproj">
       <Project>{AE2B31A8-ABC2-4A12-978C-7A55693086E6}</Project>

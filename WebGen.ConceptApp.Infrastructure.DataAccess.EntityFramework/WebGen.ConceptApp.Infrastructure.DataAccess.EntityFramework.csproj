@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -32,10 +32,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.Core" />
     <Reference Include="EntityFramework, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
       <HintPath>..\packages\EntityFramework.4.1.10311.0\lib\EntityFramework.dll</HintPath>
     </Reference>
+    <Reference Include="System.Web" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppContext.cs" />
@@ -51,6 +51,10 @@
     <ProjectReference Include="..\WebGen.Core\WebGen.Core.csproj">
       <Project>{72C09915-2A7E-412B-B5E1-B44FDCFBD55F}</Project>
       <Name>WebGen.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebGen.Infrastructure.EntityFramework\WebGen.Infrastructure.EntityFramework.csproj">
+      <Project>{F732BB8C-A160-449F-9E65-BAB799DD4518}</Project>
+      <Name>WebGen.Infrastructure.EntityFramework</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
